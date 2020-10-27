@@ -1,14 +1,23 @@
-var adjectives = ["deep", "bitter", "hopeful", "mysterious", "bashful", "joyous", "intense", "lonesome", "terrible", "ominous", "infinite", "beautiful", "hopeless", "useless", "mystical"];
-var nouns = ["tree", "cave", "horizon", "ship", "man", "woman", "lagoon", "mountain", "lake", "lover", "child", "bicycle", "road", "computer", "traveller"];
-var verbs = ["cascades", "glows", "hums", "vibrates", "explodes", "cries", "wails", "sings", "crumbles", "grows", "loathes", "longs", "lingers", "looms", "awaits"];
+let adjectives;
+let nouns;
+let verbs;
 
 var xoff = 0;
 var yoff = 1;
 
 var randH = 0;
 
+// New function called preload - called before setup to ensure strings are read from textfile
+function preload() {
+  adjectives = loadStrings('static/strings/adjectives.txt'); //loads contents of text file into adjectives array
+  nouns = loadStrings('static/strings/nouns.txt'); //loads contents of text file into adjectives array
+  verbs = loadStrings('static/strings/verbs.txt'); //loads contents of text file into adjectives array
+}
+
 function setup() {
+
   colorMode(HSB);
+
 
   randH = random(361)
   console.log(randH);

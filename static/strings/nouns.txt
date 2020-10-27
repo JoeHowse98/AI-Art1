@@ -1,0 +1,15 @@
+tree
+cave
+horizon
+ship
+man
+woman
+lagoon
+mountain
+lake
+lover
+child
+bicycle
+road
+computer
+traveller
