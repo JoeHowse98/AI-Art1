@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def render_home():
+    print("egg")
     return render_template('home.html')
 
 
