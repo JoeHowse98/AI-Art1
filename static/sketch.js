@@ -12,6 +12,7 @@ function preload() {
     adjectives = loadStrings('static/strings/adjectives.txt'); //loads contents of text file into adjectives array
     nouns = loadStrings('static/strings/nouns.txt'); //loads contents of text file into nouns array
     verbs = loadStrings('static/strings/verbs.txt'); //loads contents of text file into verbs array
+    console.log(adjectives)
 }
 
 function setup() {
@@ -29,6 +30,14 @@ function setup() {
     text(rnd_adjective, 50, 200);
     text(rnd_noun, 50, 300);
     text(rnd_verb, 50, 400)
+    // AJAX call to return the adjectives array back to flask - probably better to move this to flask and send data upstream rather than piping back and forth
+    $.ajax({
+          type: "POST",
+          contentType: "application/json",
+          url: "/fetch-array",
+          data: JSON.stringify(adjectives),
+          dataType: "json"
+          });
 }
 
 function draw() {
