@@ -23,7 +23,7 @@ function setup() {
     var rnd_noun = random(nouns);
     var rnd_verb = random(verbs);
 
-    textSize(75)
+    textSize(75);
     fill(0, 0, 100);
     text("the", 50, 100);
     text(rnd_adjective, 50, 200);
